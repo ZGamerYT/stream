@@ -17,14 +17,14 @@ client.on('message', message => {
   if (message.content.startsWith(prefix + 'setwatch')) {
   client.user.setActivity(argresult, {type: 'WATCHING'})
      console.log('test' + argresult);
-    message.channel.sendMessage(`Watch Now: **${argresult}`)
+    message.channel.sendMessage(`:white_check_mark:`)
 } 
 
  
   if (message.content.startsWith(prefix + 'setlis')) {
   client.user.setActivity(argresult, {type: 'LISTENING'})
      console.log('test' + argresult);
-    message.channel.sendMessage(`LISTENING Now: **${argresult}`)
+    message.channel.sendMessage(`:white_check_mark:`)
 } 
 
 
@@ -36,18 +36,18 @@ if (message.content.startsWith(prefix + 'setname')) {
 
 if (message.content.startsWith(prefix + 'setavatar')) {
   client.user.setAvatar(argresult);
-   message.channel.sendMessage(`Avatar Changed Successfully To **${argresult}**`);
+   message.channel.sendMessage(`Avatar Changed Successfully :white_check_mark:`);
 }
 
 if (message.content.startsWith(prefix + 'setT')) {
   client.user.setGame(argresult, "https://www.twitch.tv/peery13");
      console.log('test' + argresult);
-    message.channel.sendMessage(`:white_check_mark: }`)
+    message.channel.sendMessage(`:white_check_mark: `)
 } 
 if (message.content.startsWith(prefix + 'setgame')) {
   client.user.setGame(argresult);
      console.log('test' + argresult);
-    message.channel.sendMessage(`Playing: **${argresult}`)
+    message.channel.sendMessage(`:white_check_mark:`)
 } 
 
 
@@ -55,4 +55,4 @@ if (message.content.startsWith(prefix + 'setgame')) {
 });
 
 
-client.login("NDQ1MjcwMDQ5Mzg5ODA1NTc5.XLedrw.4crRKHbT9JGdp9yXVIyw2v49gbY");
+client.login(process.env.BOT_TOKEN);
